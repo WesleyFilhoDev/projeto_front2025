@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-white px-4">
+    <main className="flex flex-col items-center justify-center min-h-screen bg-white px-4 max-w-sm mx-auto sm:hidden">
       {/* Logo */}
       <h1 className="text-3xl font-semibold text-center text-black mb-10">
         Tramp
@@ -8,7 +8,7 @@ export default function Hero() {
       </h1>
 
       {/* Botões */}
-      <div className="flex flex-col gap-4 w-full max-w-xs">
+      <div className="flex flex-col gap-4 w-full">
         <button className="w-full bg-purple-600 text-white py-3 rounded-xl font-medium hover:bg-purple-700 transition">
           Entrar como Candidato
         </button>
