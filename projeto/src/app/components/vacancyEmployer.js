@@ -45,7 +45,12 @@ export default function VacancyPage() {
       <h1 className="text-3xl font-bold text-[#0B2568] mb-1">
         Quem você está procurando?
       </h1>
-      <p className="text-[#0A2753] text-base mb-4">Vagas publicadas:</p>
+      <div className="flex justify-between items-center mb-4">
+        <p className="text-[#0A2753] text-base">Vagas publicadas:</p>
+        <button className="flex items-center gap-1 bg-[#5A2FDA] text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-md hover:bg-[#5b21b6] transition">
+          Adicionar
+        </button>
+      </div>
 
       <div className="flex flex-col gap-4">
         {vacancies.map((vaga) => (
