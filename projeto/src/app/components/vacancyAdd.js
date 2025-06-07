@@ -1,56 +1,65 @@
 "use client";
 import Image from "next/image";
-import VacancyCard from "./vacancyCard";
 
-export default function VacancyEmployer() {
-  const vacancies = [
-    {
-      id: 1,
-      title: "Barista",
-      location: "Espinheiro, Recife",
-      image: "/barista.png",
-    },
-    {
-      id: 2,
-      title: "Atendente",
-      location: "Boa Viagem, Recife",
-      image: "/atendente.png",
-    },
-  ];
-
+export default function VacancyAdd() {
   return (
-    <main className="min-h-screen bg-white px-4 pt-6 pb-10 max-w-md mx-auto font-sans">
+    <main className="min-h-screen bg-white px-6 pt-6 pb-10 max-w-md mx-auto font-sans shadow-md">
       <div className="flex justify-between items-center mb-6">
-        <div className="flex items-center gap-2">
-          <div className="absolute top-4 left-4 bg-white p-1 rounded-xl w-max">
-            <Image
-              src="/Ti.png"
-              alt="Logo"
-              width={150}
-              height={40}
-              className="rounded-lg"
-            />
-          </div>
+        <div className="bg-white p-1 rounded-xl w-max">
+          <Image
+            src="/Ti.png"
+            alt="Logo"
+            width={150}
+            height={40}
+            className="rounded-lg"
+          />
         </div>
         <Image
           src="/man.png"
-          alt="/Avatar"
+          alt="Avatar"
           width={36}
           height={36}
           className="rounded-full"
         />
       </div>
 
-      <p className="text-[#0A2753] text-base mb-4">Olá, Daniel!</p>
-      <h1 className="text-3xl font-bold text-[#0B2568] mb-1">
-        Digite os dados da nova vaga
+      <h1 className="text-3xl font-bold text-[#0B2568] mb-6 leading-tight">
+        Digite os dados <br /> da nova vaga
       </h1>
-      <div className="flex justify-between items-center mb-4">
-        <label htmlFor="Título:" className = ""
-        <button className="flex items-center gap-1 bg-[#5A2FDA] text-white px-20 py-1.5 rounded-full text-sm font-medium shadow-md hover:bg-[#5b21b6] transition">
-          Criar
+
+      <form className="flex flex-col gap-4">
+        {[
+          "Título",
+          "Tipo de trabalho",
+          "Descrição",
+          "Requisitos",
+          "Salário",
+          "Endereço",
+          "Bairro",
+          "Cidade",
+        ].map((label) => (
+          <div key={label} className="flex flex-col">
+            <label
+              htmlFor={label.toLowerCase()}
+              className="text-[#0A2753] font-semibold mb-1"
+            >
+              {label}:
+            </label>
+            <input
+              type="text"
+              id={label.toLowerCase()}
+              className="bg-[#E5E5E5] rounded-full px-4 py-2 outline-none"
+            />
+          </div>
+        ))}
+
+        <button
+          type="submit"
+          className="bg-[#673DE6] text-white rounded-full py-2 text-center mt-4 hover:bg-[#5a32cc] transition"
+        >
+          Criar nova vaga
         </button>
-      </div>
+      </form>
     </main>
   );
 }
