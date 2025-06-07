@@ -2,39 +2,38 @@
 import Image from "next/image";
 import VacancyCard from "./vacancyCard";
 
-const vacancies = [
-  {
-    id: 1,
-    title: "Barista",
-    location: "Espinheiro, Recife",
-    image: "/barista.png",
-  },
-  {
-    id: 2,
-    title: "Atendente",
-    location: "Boa Viagem, Recife",
-    image: "/atendente.png",
-  },
-];
+export default function VacancyPage() {
+  const vacancies = [
+    {
+      id: 1,
+      title: "Barista",
+      location: "Espinheiro, Recife",
+      image: "/barista.png",
+    },
+    {
+      id: 2,
+      title: "Atendente",
+      location: "Boa Viagem, Recife",
+      image: "/atendente.png",
+    },
+  ];
 
-export default function vacancyEmployer() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex justify-center items-center p-4">
-      <div className="bg-white text-gray-900 rounded-3xl max-w-sm w-full p-6 shadow-xl">
-        <div className="flex justify-between items-center mb-4">
-          <div>
-            <p className="text-sm">Olá, Daniel!</p>
-            <h2 className="text-2xl font-bold text-blue-900">
-              Quem você está procurando?
-            </h2>
+    <main className="min-h-screen bg-white px-4 pt-6 pb-10 max-w-md mx-auto font-sans">
+      <div className="flex justify-between items-center mb-6">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-xl bg-gray-200 flx items-center justify-center text-purple-700 font-bold">
+            Ti
           </div>
-          <Image
-            src="/avatar.webp"
-            alt="Avatar"
-            className="w-10 h-10 rounded-full border-2 border-white shadow-md"
-          />
         </div>
+        <Image
+          src="/avatar.webp"
+          alt="/Avatar"
+          width={36}
+          height={36}
+          className="rounded-full"
+        />
       </div>
-    </div>
+    </main>
   );
 }
