@@ -46,9 +46,10 @@ export default function VacancyAdd() {
               {label}:
             </label>
             <input
-              type="text"
+              type={label === "Salário" ? "number" : "text"}
+              step={label === "Salário" ? "any" : undefined}
               id={label.toLowerCase()}
-              className="bg-[#E5E5E5] rounded-full px-4 py-2 outline-none"
+              className="bg-[#E5E5E5] text-black rounded-full px-4 py-2 outline-none"
             />
           </div>
         ))}
