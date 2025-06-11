@@ -20,7 +20,6 @@ export default function VacancyPage() {
 
   function handleDesistir(id) {
     console.log(`Desistiu da vaga ${id}`);
-    // Aqui você pode adicionar a lógica para desistir da vaga
   }
 
   return (
@@ -33,7 +32,7 @@ export default function VacancyPage() {
           </div>
         </div>
         <Image
-          src="/avatar.webp" // Substitua com a imagem real do usuário
+          src="/avatar.webp"
           alt="Avatar"
           width={36}
           height={36}
